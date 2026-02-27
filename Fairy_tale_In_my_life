@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Someone Special ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            width: 60%;
+            margin: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #ff4e50;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #ff4e50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1 id="message">Hey you ❤️</h1>
+        <p id="text">Click next… I have something to tell you.</p>
+        <button onclick="nextPage()">Next 💌</button>
+    </div>
+
+<script>
+
+let page = 0;
+
+function nextPage() {
+    page++;
+
+    if (page === 1) {
+        document.getElementById("message").innerText = "About Yesterday...";
+        document.getElementById("text").innerText = "I know we fought, and maybe I said things I shouldn’t have.";
+    }
+
+    else if (page === 2) {
+        document.getElementById("message").innerText = "But The Truth Is...";
+        document.getElementById("text").innerText = "Even when we fight, my heart still chooses you.";
+    }
+
+    else if (page === 3) {
+        document.getElementById("message").innerText = "You Matter To Me";
+        document.getElementById("text").innerText = "More than my ego. More than being right. More than anything.";
+    }
+
+    else if (page === 4) {
+        document.getElementById("message").innerText = "I Love You ❤️";
+        document.getElementById("text").innerText = "And I don’t ever want a fight to make you doubt that.";
+    }
+
+    else {
+        document.querySelector("button").style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>
